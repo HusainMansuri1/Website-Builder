@@ -1,0 +1,30 @@
+.landing-page .content{
+  max-width: 100%;
+  width: 600px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.landing-page .title{
+  font-size: 45px;
+}
+
+.landing-page .subtitle{
+  font-size: 20px;
+  margin: 15px 0 30px;
+  color: #333;
+}
+
+.landing-page .start-btn{
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 15px 20px;
+  font-weight: 600;
+  color: #fff;
+  background: #2d74e5;
+  border-radius: 5px;
+}
+
