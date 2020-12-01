@@ -3,9 +3,15 @@ import Landing from '../../pages/Landing/Landing';
 import Builder from '../../pages/Builder/Builder';
 import Delivery from '../../pages/Delivery/Delivery';
 
+const statContext = React.createContext();
+
 class Layout extends Component {
   state = { 
-    name: 'Website Builder',
+    projectDetails : {
+      name: 'Website Builder',
+      desc: 'follow simple steps for generating your website',
+      cta: 'Get Started'
+    },
     
     // pages: [
     //   {id: 'landing', show: true, value: <Landing key="landing"/>},
@@ -132,7 +138,7 @@ class Layout extends Component {
   } 
 
   allPages = [
-    {id: 'landing', value: <Landing key="landing" title={this.state.name} pageChange={this.pageChangeHandler}/>},
+    {id: 'landing', value: <Landing key="landing" pageChange={this.pageChangeHandler}/>},
     {id: 'builder', value: <Builder key="builder"/>},
     {id: 'delivery', value: <Delivery key="delivery"/>},
   ]
@@ -142,11 +148,14 @@ class Layout extends Component {
 
   render() {
     return ( 
-      <div className="layout">
-        {this.displayCurrentPage()}
-      </div>
+      <statContext.Provider value={this.state}>
+        <div className="layout">
+          {this.displayCurrentPage()}
+        </div>
+      </statContext.Provider>
     );
   }
 }
 
 export default Layout;
+export {statContext};
