@@ -7,12 +7,6 @@ class Layout extends Component {
   state = { 
     name: 'Website Builder',
     
-    // pages: [
-    //   {id: 'landing', show: true, value: <Landing key="landing"/>},
-    //   {id: 'builder', show: false, value: <Builder key="builder"/>},
-    //   {id: 'delivery', show: false, value: <Delivery key="delivery"/>},
-    // ],
-
     pages: [
       {id: 'landing', show: true},
       {id: 'builder', show: false},
@@ -35,13 +29,13 @@ class Layout extends Component {
 
     sectionDetail: {
       visibility: [
-        {id: 'header', show: true},
-        {id: 'banner', show: false},
+        {id: 'header', show: false},
+        {id: 'banner', show: true},
         {id: 'showcase', show: false},
         {id: 'service', show: false},
         {id: 'faq', show: false},
         {id: 'testimonial', show: false},
-        {id: 'footer', show: true},
+        {id: 'footer', show: false},
       ],
 
       content: {
@@ -129,17 +123,35 @@ class Layout extends Component {
     });
     
     this.setState({pages})    
-  } 
+  };
+  
+  sectionToggleHandler = (id) => {
+    const visibility = [...this.state.sectionDetail.visibility];
+    let currentIndex = null;
+    let currentElem = null;
+
+    visibility.map((curr,ind) => curr.id === id ? currentIndex = ind : '');
+    
+    currentElem = {...visibility[currentIndex]};
+    currentElem.show = !currentElem.show;
+        
+    visibility[currentIndex] = {...currentElem};
+
+    const sectionDetail = {...this.state.sectionDetail};
+    sectionDetail.visibility = visibility;
+
+    this.setState({ sectionDetail });
+    this.forceUpdate();
+    console.log(1);
+  };
 
   allPages = [
     {id: 'landing', value: <Landing key="landing" title={this.state.name} pageChange={this.pageChangeHandler}/>},
-    {id: 'builder', value: <Builder key="builder"/>},
+    {id: 'builder', value: <Builder key="builder" state_0 ={this.state.sectionDetail.visibility} add_0={this.sectionToggleHandler}/>},
     {id: 'delivery', value: <Delivery key="delivery"/>},
-  ]
+  ];
   
   //displayCurrentPage = () => this.state.pages.map(page => page.show ? page.value : null);
-  
-
   render() {
     return ( 
       <div className="layout">
