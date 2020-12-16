@@ -20,8 +20,12 @@
   padding: 15px;
 }
 
-.dashboard-outer-wrap::-webkit-scrollbar, .preview-outer-wrap::-webkit-scrollbar {
+.dashboard-outer-wrap::-webkit-scrollbar {
   width: 10px;
+}
+
+.preview-outer-wrap::-webkit-scrollbar {
+  width: 15px;
 }
 
 /* Track */
