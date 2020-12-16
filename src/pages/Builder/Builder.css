@@ -5,7 +5,7 @@
 
 .dashboard-outer-wrap{
   width: 430px;
-  height: calc(100vh - 30px);
+  height: 100vh;
   float: left;
   overflow: auto;
   border-right: 1px solid #000;
@@ -14,8 +14,29 @@
 
 .preview-outer-wrap{
   width: calc(100% - 431px);
-  height: calc(100vh - 30px);
+  height: 100vh;
   float: right;
   overflow: auto;
   padding: 15px;
+}
+
+.dashboard-outer-wrap::-webkit-scrollbar, .preview-outer-wrap::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.dashboard-outer-wrap::-webkit-scrollbar-track, .preview-outer-wrap::-webkit-scrollbar-track {
+  background: #ccc; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.dashboard-outer-wrap::-webkit-scrollbar-thumb, .preview-outer-wrap::-webkit-scrollbar-thumb {
+  background: #41457e;
+  border-radius: 10px; 
+}
+
+/* Handle on hover */
+.dashboard-outer-wrap::-webkit-scrollbar-thumb:hover, .preview-outer-wrap::-webkit-scrollbar-thumb:hover  {
+  background: #2d74e6; 
 }

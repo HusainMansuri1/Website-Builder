@@ -85,6 +85,7 @@ class Layout extends Component {
     this.setState({pages})    
   };
   
+  // function to toggle sections
   sectionToggleHandler = (id) => {
     const visibility = [...this.state.sectionDetail.visibility];
     let currentIndex = null;
@@ -101,6 +102,7 @@ class Layout extends Component {
     this.setState({ sectionDetail });
   };
 
+  // function to change color and font
   formatChangeHandler = (id, formattingElem) => {
     const formattingElemAarray = JSON.parse(JSON.stringify(this.state.formatting[formattingElem]));
     formattingElemAarray.map((cur,ind) =>{cur.id === id ? cur.active = true : cur.active = false});
