@@ -1,0 +1,43 @@
+.faq-preview{
+  padding: 20px 0 10px;
+  /* text-align: center; */
+}
+
+.faq-preview .faq-block{
+  margin: 0 -10px;
+}
+
+.faq-preview .faq-block li{
+  width: calc((100% - 40px) / 2);
+  margin: 0 10px 30px;
+  float: left;
+}
+
+.faq-preview .faq-block .title{
+  height: 25px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.faq-preview .faq-block .desc{
+  height: 80px;
+  overflow: hidden;
+  color: rgba(0,0,0,.6);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+@media (max-width: 1024px){
+  .faq-preview .faq-block{
+    margin: 0;
+  }
+  
+  .faq-preview .faq-block li{
+    width: 100%;
+    margin: 0 0 30px;
+    float: none;
+  }
+}

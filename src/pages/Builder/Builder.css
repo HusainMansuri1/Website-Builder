@@ -6,7 +6,6 @@
 .dashboard-outer-wrap{
   width: 430px;
   height: calc(100vh - 30px);
-  margin-right: 10px;
   float: left;
   overflow: auto;
   border-right: 1px solid #000;
@@ -14,7 +13,7 @@
 }
 
 .preview-outer-wrap{
-  width: calc(100% - 441px);
+  width: calc(100% - 431px);
   height: calc(100vh - 30px);
   float: right;
   overflow: auto;

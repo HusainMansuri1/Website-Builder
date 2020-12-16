@@ -1,0 +1,58 @@
+.preview-inner-wrap{
+  border: 1px solid rgba(241, 241, 241, 1);
+}
+
+.preview-inner-wrap .sect-head{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.preview-inner-wrap.serif .theme-font{
+  font-family: serif;
+}
+
+.preview-inner-wrap.sans-serif .theme-font{
+  font-family: sans-serif;
+}
+
+.preview-inner-wrap.courier .theme-font{
+  font-family: "Courier New";
+}
+
+.preview-inner-wrap.light .theme-bg{
+  background-color: rgba(241, 241, 241, .3);
+}
+
+.preview-inner-wrap.dark .theme-bg{
+  background-color: #2f2f2f;
+}
+
+.preview-inner-wrap.bold .theme-bg{
+  background-color: #af424c;
+}
+
+.preview-inner-wrap.light .sect-head{
+  color: #8e8e8e;
+}
+
+.preview-inner-wrap.dark .sect-head{
+  color: #000;
+}
+
+.preview-inner-wrap.bold .sect-head{
+  color: #af424c;
+}
+
+.preview-inner-wrap.light .theme-bg .theme-bg-text-color {
+  color: #000;
+}
+
+.preview-inner-wrap.dark .theme-bg .theme-bg-text-color{
+  color: #fff;
+}
+
+.preview-inner-wrap.bold .theme-bg .theme-bg-text-color{
+  color: #fff;
+}

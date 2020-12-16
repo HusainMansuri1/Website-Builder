@@ -1,12 +1,14 @@
+import DashboardAdd from './DashboardComponents/DashboardAdd/DashboardAdd';
+import DashBoardFormatting from './DashboardComponents/DashBoardFormatting/DashBoardFormatting';
 import './Dashboard.css';
-import Dashboard_Add from '../Dashboard_Add/Dashboard_Add';
 
 const Dashboard = (props) => {
   return (  
     <div className="dashboard-wrap">
-      <Dashboard_Add state_2={props.state_1} add_2 = {props.add_1}/>
+      <DashboardAdd pushedLayoutClass_2={props.pushedLayoutClass_1}/>
+      <DashBoardFormatting pushedLayoutClass_2={props.pushedLayoutClass_1}/>
     </div>
   );
 }
- 
+
 export default Dashboard;

@@ -1,0 +1,34 @@
+.footer-preview {
+  padding: 20px 0 0;
+  background: #2b2b2b;
+  text-align: center;
+}
+
+.footer-preview .footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-preview .footer-logo a{
+  height: 25px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.footer-preview .footer-nav li{
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.footer-preview .footer-nav a{
+  color: rgba(255,255,255,.8);
+}
+
+.copyright-wrap{
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.5);
+  padding: 15px 0;
+  color: rgba(255,255,255,.7)
+}
+

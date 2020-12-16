@@ -1,26 +1,65 @@
 .dashboard-component{
-  margin-bottom: 30px;
-  border: 1px solid #ccc;
   padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
 }
 
 .dashboard-sect-head{
-  text-transform: capitalize;
-  margin: 10px 0 15px;
-  font-size: 25px;
-  position: relative;
   padding-bottom: 5px;
+  border-bottom: 2px solid #2d74e6;
+  margin: 10px 0 15px;
+  position: relative;
   color: #41457e;
+  font-size: 25px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
-.dashboard-sect-head::before {
-  content: '';
+.dashboard-sub-component{
+  padding: 5px 10px 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.dashboard-sect-sub-head{
+  color: #2d74e6;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.dashboard-common-btn{
   width: 100%;
-  height: 2px;
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  background: #2d74e6;
+  padding: 10px;
+  margin: 10px 0;
+  display: block;
+  background: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 500;
+  color: #41cbb7;
+  border: 1px solid #41cbb7;
+}
+
+.add-section-btn-wrap .dashboard-common-btn::before{
+  content: "Add ";
+}
+
+.add-section-btn-wrap .dashboard-common-btn::after{
+  content: " + ";
+}
+
+.add-section-btn-wrap .dashboard-common-btn.added::before{
+  content: " Remove ";
+}
+
+.add-section-btn-wrap .dashboard-common-btn.added::after{
+  content: " - ";
+}
+
+.dashboard-common-btn.added{
+  color: #fff;
+  border-color: transparent;
+  background: #41cbb7;
 }
